@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import repair1 from '../../../images/repair1.jpg'
+import Service from '../Service/Service';
+import './Services.css'
+
 
 const Services = () => {
 
@@ -15,8 +17,20 @@ const Services = () => {
 
     return (
         <div>
-            <h2>Services is {services.length}</h2>
-        </div>
+            <h1 className='services-title'>Our Services</h1>
+
+            <div className='services-container'>
+                {
+                    services.map(service => <Service
+                        key={service.id}
+                        service={service}
+                    >
+
+                    </Service>)
+                }
+            </div>
+
+        </div >
     );
 };
 
