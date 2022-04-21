@@ -13,6 +13,24 @@ const firebaseConfig = {
     storageBucket: process.env.REACT_APP_storageBucket,
     messagingSenderId: process.env.REACT_APP_messagingSenderId,
     appId: process.env.REACT_APP_appId,
+
+    /* 
+    //protected code
+    .env.local
+    
+    REACT_APP_apiKey=AIzaSyBrwLzFRTd3ifDw2ZyphhB1ZWLu6JhREq8
+    REACT_APP_authDomain=genius-car-services-75f99.firebaseapp.com
+    REACT_APP_projectId=genius-car-services-75f99"
+    REACT_APP_storageBucket=genius-car-services-75f99.appspot.com
+    REACT_APP_messagingSenderId=984000951444
+    REACT_APP_appId=1:984000951444:web:c303fb7d3c3b2a581bb081
+    
+    
+    
+    */
+
+
+
 };
 
 // Initialize Firebase
