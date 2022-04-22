@@ -64,10 +64,11 @@
 
 ## RequireAuth.js
 
- <!-- for send email verification -->
+ * 1. for send email verification -->
     const [sendEmailVerification, sending, error] = useSendEmailVerification(auth);
 
- <!-- if user no verify email -->
+ * 2. if user no verify email -->
+
     if (!user.emailVerified) {
         return <div >
             <h3 className=' text-danger'> Your Email Is Not Verified!!</h3>
@@ -84,5 +85,12 @@
             <ToastContainer></ToastContainer>
         </div>
     }
+
+
+# react google map **
+
+* 1. for installation
+
+    npm install --save @react-google-maps/api
 
 
