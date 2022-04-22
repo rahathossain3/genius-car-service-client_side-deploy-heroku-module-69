@@ -11,6 +11,7 @@ import SocialLogin from '../SocialLogin/SocialLogin';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import PageTitle from '../../Shared/PageTitle/PageTitle';
 
 
 const Login = () => {
@@ -32,6 +33,7 @@ const Login = () => {
     const [
         signInWithEmailAndPassword,
         user,
+        // for loading
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
@@ -40,7 +42,7 @@ const Login = () => {
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
 
-
+    // for loading
     if (loading || sending) {
         return <Loading></Loading>
     }
@@ -93,6 +95,7 @@ const Login = () => {
 
 
         <div className='container w-50 mx-auto'>
+            <PageTitle title='Login' ></PageTitle>
 
             <h2 className=' text-primary text-center'>Please login</h2>
 
