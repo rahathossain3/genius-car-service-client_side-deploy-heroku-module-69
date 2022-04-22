@@ -64,7 +64,7 @@
 
 ## RequireAuth.js
 
- <!-- for send email varification -->
+ <!-- for send email verification -->
     const [sendEmailVerification, sending, error] = useSendEmailVerification(auth);
 
  <!-- if user no verify email -->
