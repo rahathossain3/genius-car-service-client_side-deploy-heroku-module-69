@@ -94,3 +94,11 @@
     npm install --save @react-google-maps/api
 
 
+# module 68
+
+### get a input field target value
+ob_property_name: event.target.input_field_name.value
+
+
+### install  axios
+    npm install axios
