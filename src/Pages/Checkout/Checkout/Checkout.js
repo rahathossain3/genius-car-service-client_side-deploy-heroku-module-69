@@ -1,9 +1,19 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
+import useServiceDetail from '../../../hooks/useServiceDetail';
 
 const Checkout = () => {
+    const { serviceId } = useParams();
+    const [service] = useServiceDetail(serviceId);
+
     return (
-        <div>
-            <h2>Pleases checkout Your booking</h2>
+        <div className='w-50  mx-auto'>
+            <h2>Pleases Order : {service.name}</h2>
+
+            <form >
+                <input type="text" name='name' placeholder='name' required />
+            </form>
+
         </div>
     );
 };
