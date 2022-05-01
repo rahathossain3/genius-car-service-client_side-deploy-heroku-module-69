@@ -1,9 +1,10 @@
-import axios from 'axios';
+// import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import { signOut } from 'firebase/auth';
 import auth from '../../firebase.init';
+import axiosPrivate from '../../api/axiosPrivate';
 
 const Order = () => {
     const [user] = useAuthState(auth)
@@ -21,11 +22,13 @@ const Order = () => {
             const url = `http://localhost:5000/order?email=${email}`;
             //when get fake token
             try {
-                const { data } = await axios.get(url, {
-                    headers: {
-                        authorization: `Bearer ${localStorage.getItem('accessToken')}`
-                    }
-                });
+                const { data } = await axiosPrivate.get(url);
+
+                // const { data } = await axios.get(url, {
+                //     headers: {
+                //         authorization: `Bearer ${localStorage.getItem('accessToken')}`
+                //     }
+                // });
                 setOrders(data);
 
             }
