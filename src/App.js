@@ -12,6 +12,8 @@ import ServiceDetail from './Pages/ServiceDetail/ServiceDetail';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
 import NotFound from './Pages/Shared/NotFound/NotFound';
+import { ToastContainer } from 'react-toastify';
+import Order from './Pages/Order/Order';
 
 function App() {
   return (
@@ -44,6 +46,12 @@ function App() {
           </RequireAuth>
         }></Route>
 
+        <Route path='/orders' element={
+          <RequireAuth>
+            <Order></Order>
+          </RequireAuth>
+        }></Route>
+
         <Route path='*' element={<NotFound></NotFound>}></Route>
 
 
@@ -52,6 +60,8 @@ function App() {
       </Routes>
 
       <Footer></Footer>
+
+      <ToastContainer></ToastContainer>
 
     </div>
   );
