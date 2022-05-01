@@ -4,7 +4,7 @@ const useServiceDetail = serviceId => {
     const [service, setService] = useState({});
 
     useEffect(() => {
-        const url = `http://localhost:5000/service/${serviceId}`;
+        const url = `https://shielded-forest-30864.herokuapp.com/service/${serviceId}`;
 
         console.log(url);
 

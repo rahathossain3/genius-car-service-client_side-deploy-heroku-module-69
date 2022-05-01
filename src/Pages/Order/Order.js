@@ -19,7 +19,7 @@ const Order = () => {
             //user wish product
             const email = user.email;
 
-            const url = `http://localhost:5000/order?email=${email}`;
+            const url = `https://shielded-forest-30864.herokuapp.com/order?email=${email}`;
             //when get fake token
             try {
                 const { data } = await axiosPrivate.get(url);

@@ -44,7 +44,7 @@ const Checkout = () => {
         }
 
 
-        axios.post('http://localhost:5000/order', order)
+        axios.post('https://shielded-forest-30864.herokuapp.com/order', order)
             .then((response) => {
                 const { data } = response;
                 if (data.insertedId) {
