@@ -5,7 +5,6 @@ import github from '../../../images/social/github.png';
 import { useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { isFocusable } from '@testing-library/user-event/dist/utils';
 import Loading from '../../Shared/Loading/Loading';
 
 const SocialLogin = () => {
